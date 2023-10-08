@@ -1,6 +1,10 @@
 import 'package:bugshop/constants.dart';
 import 'package:bugshop/models/Product.dart';
+import 'package:bugshop/screens/details/components/add_to_cart.dart';
 import 'package:bugshop/screens/details/components/color_and_size.dart';
+import 'package:bugshop/screens/details/components/counter_with_fav_btn.dart';
+import 'package:bugshop/screens/details/components/description.dart';
+import 'package:bugshop/screens/details/components/product_title_with_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -61,15 +65,15 @@ class DetailsScreen extends StatelessWidget {
                       children: <Widget>[
                         ColorAndSize(product: product),
                         SizedBox(height: kDefaultPadding / 2),
-                        // Description(product: product),
-                        // SizedBox(height: kDefaultPaddin / 2),
-                        // CounterWithFavBtn(),
-                        // SizedBox(height: kDefaultPaddin / 2),
-                        // AddToCart(product: product)
+                        Description(product: product),
+                        SizedBox(height: kDefaultPadding / 2),
+                        CounterWithFavBtn(),
+                        SizedBox(height: kDefaultPadding / 2),
+                        AddToCart(product: product)
                       ],
                     ),
                   ),
-                  //  ProductTitleWithImage(product: product)
+                  ProductTitleWithImage(product: product)
                 ],
               ),
             )
